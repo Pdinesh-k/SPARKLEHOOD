@@ -1,0 +1,132 @@
+# ========================
+# Python
+# ========================
+# Byte-compiled / optimized / DLL files
+__pycache__/
+*.py[cod]
+*$py.class
+
+# Virtual environment
+venv/
+env/
+ENV/
+.venv/
+.pytest_cache/
+*.egg-info/
+.eggs/
+
+# Python cache
+.cache/
+pip-wheel-metadata/
+
+# Distribution / packaging
+build/
+develop-eggs/
+dist/
+downloads/
+eggs/
+lib/
+lib64/
+parts/
+sdist/
+var/
+
+# Jupyter Notebook
+.ipynb_checkpoints
+
+# PyInstaller
+*.spec
+
+# mypy
+.mypy_cache/
+
+# pylint
+pylint-report.txt
+pylint-output.txt
+
+# coverage reports
+htmlcov/
+.coverage
+.coverage.*
+.cache
+nosetests.xml
+coverage.xml
+*.cover
+*.py,cover
+
+# pyenv
+.python-version
+
+# Django stuff:
+*.log
+local_settings.py
+db.sqlite3
+
+# Flask stuff:
+instance/
+.webassets-cache
+
+# VSCode Python Settings
+.vscode/
+
+# ========================
+# Node / JavaScript / React
+# ========================
+# Dependency directories
+node_modules/
+
+# Production build
+/build
+/dist
+
+# Optional npm cache directory
+.npm
+
+# Optional eslint cache
+.eslintcache
+
+# dotenv environment variables file
+.env
+.env.local
+.env.development.local
+.env.test.local
+.env.production.local
+
+# Next.js build
+.next/
+
+# Nuxt.js build
+.nuxt/
+
+# Gatsby files
+.cache/
+
+# Logs
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+
+# VSCode settings
+.vscode/
+
+# MacOS stuff
+.DS_Store
+
+# Temporary files
+*.swp
+*.swo
+*.tmp
+*.temp
+*.bak
+
+# Coverage directory used by tools like istanbul
+coverage/
+
+# IDEs
+.idea/
+*.iml
+
+# Storybook build
+out/
+storybook-static/
