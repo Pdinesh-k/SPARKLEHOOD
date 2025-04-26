@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
 import { Typography, Card, CardContent, CardActions, Button, Grid, Chip, CircularProgress } from "@mui/material";
 import { useNavigate } from "react-router-dom";
-import axios from "axios";
+import api from "../api";
 
 function IncidentList() {
   const [incidents, setIncidents] = useState([]);
@@ -9,7 +9,7 @@ function IncidentList() {
   const navigate = useNavigate();
 
   useEffect(() => {
-    axios.get("/backend/incidents")
+    api.get("/incidents")
       .then(res => {
         setIncidents(res.data);
         setLoading(false);

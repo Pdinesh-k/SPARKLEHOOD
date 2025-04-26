@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
 import { Typography, Card, CardContent, Chip, Button, CircularProgress, Alert } from "@mui/material";
 import { useParams, useNavigate } from "react-router-dom";
-import axios from "axios";
+import api from "../api";
 
 function IncidentDetail() {
   const { id } = useParams();
@@ -11,7 +11,7 @@ function IncidentDetail() {
   const navigate = useNavigate();
 
   useEffect(() => {
-    axios.get(`/backend/incidents/${id}`)
+    api.get(`/incidents/${id}`)
       .then(res => {
         setIncident(res.data);
         setLoading(false);
@@ -24,7 +24,7 @@ function IncidentDetail() {
 
   const handleDelete = async () => {
     try {
-      await axios.delete(`/backend/incidents/${id}`);
+      await api.delete(`/incidents/${id}`);
       navigate("/");
     } catch {
       setError("Failed to delete incident.");

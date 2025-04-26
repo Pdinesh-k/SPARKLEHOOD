@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import { Typography, TextField, Button, MenuItem, Paper, Box, Alert } from "@mui/material";
-import axios from "axios";
+import api from "../api";
 import { useNavigate } from "react-router-dom";
 
 const severities = ["Low", "Medium", "High"];
@@ -20,7 +20,7 @@ function IncidentForm() {
     setError("");
     setSuccess(false);
     try {
-      await axios.post("/backend/incidents", form);
+      await api.post("/incidents", form);
       setSuccess(true);
       setTimeout(() => navigate("/"), 1200);
     } catch (err) {
@@ -77,3 +77,4 @@ function IncidentForm() {
 }
 
 export default IncidentForm;
+
